@@ -8,7 +8,7 @@ function useCurrencInfo(currency){
         .then((res) => setData(res[data]))
     }, [currency])
 
-    return data;s
+    return data;
     
 } 
 
