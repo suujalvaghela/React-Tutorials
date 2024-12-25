@@ -34,25 +34,25 @@ function App() {
 
   return (
     <body>
-      <div class="container">
+      <div className="container">
         <h1 id='text'>Password Generator</h1>
-        <div class="navbar">
+        <div className="navbar">
           <input type="text" value={Password} readOnly placeholder='Password' id='input' ref={passref} />
           <button id='copy' onClick={passcopied}>copy</button>
         </div>
-        <div class="changing">
-          <div class="range1">
-            <input type="range" value={length} min={3} max={18} id='range' class='newinput' onChange={(e) => setlength(e.target.value)} />
+        <div className="changing">
+          <div className="range1">
+            <input type="range" value={length} min={3} max={18} id='range' className='newinput' onChange={(e) => setlength(e.target.value)} />
             <label>Length: {length}</label>
           </div>
 
-          <div class="range1">
-            <input type="checkbox" class='newinput' defaultChecked={numbers} onChange={() => { setnumbers((prev) => !prev) }} />
+          <div className="range1">
+            <input type="checkbox" className='newinput' defaultChecked={numbers} onChange={() => { setnumbers((prev) => !prev) }} />
             <label>Numbers</label>
           </div>
 
-          <div class="range1">
-            <input type="checkbox" class='newinput' defaultChecked={characters} onChange={() => { setcharacters((prev) => !prev) }} />
+          <div className="range1">
+            <input type="checkbox" className='newinput' defaultChecked={characters} onChange={() => { setcharacters((prev) => !prev) }} />
             <label>Characters</label>
           </div>
         </div>
