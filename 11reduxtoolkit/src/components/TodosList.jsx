@@ -1,15 +1,15 @@
 // import React from 'react'
 import { useDispatch, useSelector } from "react-redux"
 import { removeTodo, updateTodo } from "../sliceFolder/Slice"
-// import { useState } from "react"
+import { useState } from "react"
 
 function TodosList() {
 
-    // const [newText , setNewText] = useState('')
+    const [newText, setNewText] = useState()
+    const [isEditable, setIsEditable] = useState(false)
 
     const todos = useSelector(state => state.todos)
     const dispatch = useDispatch()
-
 
     return (
         <>
@@ -23,11 +23,19 @@ function TodosList() {
                         >
                             <div className='text-white'>{todo.text}</div>
 
+                            
+
                             <div className="flex justify-center">
-                                <button 
-                                    onClick={() => dispatch(updateTodo(todo.id , todo.text))}
-                                    className="text-white bg-red-500 border-0 px-4 focus:outline-none pb-5 hover:bg-red-600 w-14 text-2xl rounded-md h-8" style={{ marginLeft: "950px", marginRight: "10px" }}>
-                                        @
+                                <button
+                                    onClick={() => {
+                                        if (isEditable) {
+                                            setIsEditable((prev) => !prev)
+                                        } else {
+                                            setIsEditable((prev) => !prev)
+                                        }
+                                    }}
+                                    className=" focus:outline-none pb-5  w-14 text-2xl rounded-md h-8" style={{ marginLeft: "950px", marginRight: "10px" }}>
+                                    {isEditable ? "📁" : "✏️"}
                                 </button>
 
                                 <button
