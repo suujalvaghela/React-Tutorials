@@ -5,11 +5,16 @@ import { useState } from "react"
 
 function TodosList() {
 
-    const [newText, setNewText] = useState()
+    const [newText, setNewText] = useState("")
     const [isEditable, setIsEditable] = useState(false)
 
     const todos = useSelector(state => state.todos)
     const dispatch = useDispatch()
+
+    const uTodo = (todo) => {
+        setIsEditable((prev) => !prev)
+        dispatch(updateTodo({ id: todo.id, text: newText }))
+    }
 
     return (
         <>
@@ -21,15 +26,19 @@ function TodosList() {
                             className="mt-4 flex justify-between items-center bg-zinc-800 px-4 py-2 rounded"
                             key={todo.id}
                         >
-                            <div className='text-white'>{todo.text}</div>
-
-                            
+                            <input type="text" className={`text-white border outline-none w-full bg-transparent rounded-lg ${isEditable ? "border-black/10 px-2" : "border-transparent"
+                                } `
+                            }
+                                value={newText || todo.text}
+                                onChange={(e) => setNewText(e.target.value)}
+                                readOnly={!isEditable} />
 
                             <div className="flex justify-center">
                                 <button
                                     onClick={() => {
                                         if (isEditable) {
                                             setIsEditable((prev) => !prev)
+                                            useDispatch(updateTodo({ id: todo.id, text: newText }))
                                         } else {
                                             setIsEditable((prev) => !prev)
                                         }
@@ -39,7 +48,9 @@ function TodosList() {
                                 </button>
 
                                 <button
-                                    onClick={() => dispatch(removeTodo(todo.id))}
+                                    onClick={() => {
+                                        dispatch(removeTodo(todo.id))
+                                    }}
                                     className="text-white bg-red-500 border-0 py-1 px-4 focus:outline-none hover:bg-red-600 rounded text-md"
                                 >
                                     <svg

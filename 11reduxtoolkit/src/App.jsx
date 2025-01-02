@@ -7,9 +7,13 @@ function App() {
 
   return (
     <div>
-      <AddTodo/>
+      <div>
+        <AddTodo />
+      </div>
 
-      <TodosList/>
+      <div>
+        <TodosList />
+      </div>
     </div>
   )
 }
