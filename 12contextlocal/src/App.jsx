@@ -6,7 +6,7 @@ import { TodoProvider } from './contexts/TodoContext'
 
 function App() {
 
-  const [Todos, setTodos] = useState([{id: 60 , Todo: "Nidziieee" , completed: true}])
+  const [Todos, setTodos] = useState([{id: 8 , Todo: "THALA" , completed: true}])
   // const [Todos, setTodos] = useState([])
 
   const addTodo = (todo) => {

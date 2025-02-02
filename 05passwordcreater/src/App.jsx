@@ -28,7 +28,7 @@ function App() {
 
   const passcopied = useCallback(() => {
     passref.current?.select();
-    passref.current?.setSelectionRange(1,7);
+    // passref.current?.setSelectionRange(1,7);
     window.navigator.clipboard.writeText(Password);
   },[Password])
 

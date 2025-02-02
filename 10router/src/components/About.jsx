@@ -5,7 +5,7 @@ export default function About() {
                 <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
                     <div className="md:5/12 lg:w-5/12">
                         <img style={{width: "500px"}}
-                            src="https://media.licdn.com/dms/image/v2/D5622AQFiDjraGYKuQg/feedshare-shrink_800/feedshare-shrink_800/0/1716216474599?e=2147483647&v=beta&t=qHjAp-4GDAAmkc2_DneebFVqul-SeQ_pxAU1M41oA-A"   
+                            src="https://monomousumi.com/wp-content/uploads/react.png"   
                             alt="image"
                         />
                     </div>
