@@ -7,5 +7,23 @@ import Button from './Button.jsx'
 import Input from './Input.jsx'
 import UserLogin from "./UserLogin.jsx";
 import UserSignUp from './UserSignUp.jsx'
+import RTE from "./RTE.jsx";
+import Select from './Select.jsx'
+import PostCard from './PostCard.jsx'
+import PostForm from './PostForm.jsx'
 
-export {Header , Footer , Logo , LogoutBtn , Container , Button , Input , UserLogin , UserSignUp}
+export {
+    Header,
+    Footer,
+    Logo,
+    LogoutBtn,
+    Container,
+    Button,
+    Input,
+    UserLogin,
+    UserSignUp,
+    RTE,
+    Select,
+    PostCard,
+    PostForm
+}
