@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect } from 'react'
-import { set, useForm } from 'react-hook-form'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useForm } from 'react-hook-form'
+import { useNavigate , useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { Input, Button, RTE, Select } from './InputBox.js'
 import appwriteService from '../appwrite/config.js'
@@ -10,6 +10,7 @@ function PostForm({ post }) {
 
     const navigate = useNavigate()
     const userData = useSelector((state) => state.auth.userData)
+    const { slug } = useParams
 
     const { register, handleSubmit, watch, setValue, getValues, control } = useForm({
         defaultValues: {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { UserLogin } from '../InputBox.js'
+import { UserLogin } from '../components/InputBox.js'
 
 function Login() {
     return (

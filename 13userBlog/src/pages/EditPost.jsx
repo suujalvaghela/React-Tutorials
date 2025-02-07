@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import appwriteService from '../../appwrite/config.js'
+import appwriteService from '../appwrite/config.js'
 import { useNavigate } from 'react-router-dom'
-import { Container , PostForm } from '../InputBox.js'
+import { Container , PostForm } from '../components/InputBox.js'
 
 function EditPost() {
     const { slug } = useParams()

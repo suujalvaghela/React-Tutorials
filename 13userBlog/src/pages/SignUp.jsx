@@ -1,5 +1,5 @@
 import React from 'react'
-import { UserSignUp } from "../InputBox.js"
+import { UserSignUp } from "../components/InputBox.js"
 
 function SignUp() {
     return (

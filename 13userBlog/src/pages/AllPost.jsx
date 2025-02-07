@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import appwriteService from '../../appwrite/config.js'
-import { PostCard, Container } from '../InputBox.js'
+import appwriteService from '../appwrite/config.js'
+import { PostCard, Container } from '../components/InputBox.js'
 
 function AllPost() {
     const [posts, setPosts] = useState([])

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container , PostForm } from '../InputBox.js'
+import {Container , PostForm } from '../components/InputBox'
 
 function AddPost() {
   return (

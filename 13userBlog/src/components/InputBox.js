@@ -11,6 +11,7 @@ import RTE from "./RTE.jsx";
 import Select from './Select.jsx'
 import PostCard from './PostCard.jsx'
 import PostForm from './PostForm.jsx'
+import AuthLayout from './AuthLayout.jsx'
 
 export {
     Header,
@@ -25,5 +26,6 @@ export {
     RTE,
     Select,
     PostCard,
-    PostForm
+    PostForm,
+    AuthLayout
 }
