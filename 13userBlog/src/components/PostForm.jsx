@@ -10,9 +10,9 @@ function PostForm({ post }) {
 
     const navigate = useNavigate()
     const userData = useSelector((state) => state.auth.userData)
-    const { slug } = useParams
+    const { slug } = useParams()
 
-    const { register, handleSubmit, watch, setValue, getValues, control } = useForm({
+    const { register, handleSubmit, watch , setValue, getValues, control } = useForm({
         defaultValues: {
             title: post?.title || '',
             slug: post?.$id || '',
@@ -35,8 +35,7 @@ function PostForm({ post }) {
             })
 
             if (dbPost) {
-                navigate(`/post/${dbPost.$id}`)
-            }
+                navigate(`/post/${dbPost.$id}`)            }
         } else {
             const file = appwriteService.uploadFile(data.image[0])
 
